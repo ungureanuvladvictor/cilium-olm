@@ -126,6 +126,10 @@ images.operator-bundle.v${cilium_version}: generate.configs.v${cilium_version}
 validate.bundles.v${cilium_version}: images.operator-bundle.v${cilium_version}
 EOF
 
+echo "wait and stuff"
+
+read -r
+
 git add Makefile.releases "${operator_dir}" "${bundle_dir}"
 
 git commit --message "Add Cilium v${cilium_version}"
